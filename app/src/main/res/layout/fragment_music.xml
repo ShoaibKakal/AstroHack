@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_container_view"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ui.music.MusicFragment">
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat = "@drawable/star_bg"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/textView_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/space_grotesk_regular"
+            android:includeFontPadding="false"
+            android:text="Astro Relax"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_relax_sound"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_height="@dimen/_170sdp"
+                app:shapeAppearanceOverlay="@style/RoundedSquare"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_header"
+                app:srcCompat="@drawable/roberto_min"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/_1sdp"
+                />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_relax_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/image_relax_sound"
+            app:layout_constraintStart_toStartOf="@id/image_relax_sound"
+            app:layout_constraintTop_toTopOf="@id/image_relax_sound">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_black"
+                android:includeFontPadding="false"
+                android:text="Relax Sounds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_19ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_black"
+                android:includeFontPadding="false"
+                android:text="Sometimes the most productive \nthing you can do is relax."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_PlayNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="play now"
+                android:textAllCaps="false"
+                android:textColor="@color/black_dark"
+                app:cornerRadius="@dimen/_10sdp"
+                app:icon="@drawable/ic_ibrary_music"
+                app:iconGravity="end"
+                app:iconPadding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:iconTint="@color/black_dark" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/song_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_relax_sound"
+            app:layout_constraintVertical_bias="0.0"
+            android:clipToPadding="false"
+            android:layout_marginBottom="@dimen/_40sdp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
